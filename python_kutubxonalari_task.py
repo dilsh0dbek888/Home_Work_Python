@@ -5,7 +5,7 @@ email = input("email kiriting : \n>>>>")
 andoza = '[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+'
 
 
-ema_il = re.search(andoza, email)
+ema_il = re.match(andoza, email)
 if ema_il:
     print(f"{email} Bu email to'g'ri.")
 else:
