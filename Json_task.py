@@ -11,17 +11,23 @@ data = {
 data_js = json.dumps(data, indent=4)
 print(data_js)
 
+with open("data.json", "w") as f:
+    json.dump(data,f, indent=4)
+
 talaba_json = {
     "ism":"Hasan",
     "familiya":"Husanov",
     "tyil":2000
 }
-
+with open('talaba.json', 'w') as f:
+    json.dump(talaba_json, f, indent=4)
 talaba_json = json.dumps(talaba_json, indent=4)
 
 talaba = json.loads(talaba_json)
 print(talaba["ism"] +" "+ talaba["familiya"])
 print(talaba)
+
+
 
 filename = 'students.json'
 with open(filename, 'r') as f:
